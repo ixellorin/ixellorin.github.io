@@ -3,18 +3,20 @@
 <body>
 <h1>Cio's GitHub.io</h1>
 <p>Still under construction...</p>
-<?php
-echo "Here are our files";
-$path = ".";
-$dh = opendir($path);
-$i=1;
-while (($file = readdir($dh)) !== false) {
-    if($file != "." && $file != ".." && $file != "index.php" && $file != ".htaccess" && $file != "error_log" && $file != "cgi-bin") {
-        echo "<a href='$path/$file'>$file</a><br /><br />";
-        $i++;
-    }
-}
-closedir($dh);
-?> 
+<script>
+var path = "C:/Users/Cio/Documents/GitHub/ixellorin.github.io"
+var fs = require('fs');
+var files = fs.readdirSync(path);
+
+files.forEach(file => {
+  var a = document.createElement('a');
+  var linkText = document.createTextNode(file);
+  a.appendChild(linkText);
+  a.title = file;
+  a.href = "https://ixellorin.github.io/".concat(file);
+  document.body.appendChild(a);
+})
+
+</script>
 </body>
 </html>
