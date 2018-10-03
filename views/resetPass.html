@@ -1,0 +1,21 @@
+<head>
+  <link rel="stylesheet" href="/static/stylesheets/bootstrap.min.css">
+</head>
+
+<div class="container">
+  <form method="POST" action="/resetPass/?token" class="login-form">
+    <h2 class="register-header">Reset Password</h2>
+
+    <label for="passwordInput" class="credential">Password</label>
+    <input type="password" id="passwordInput" name="password" class="form-control" placeholder="Password" required autofocus>
+
+    <br>
+
+    <label for="confirmPasswordInput" class="credential">Confirm Password</label>
+    <input type="password" id="confirmPasswordInput" name="confirmPassword" class="form-control" placeholder="Confirm Password" required autofocus>
+
+    <br>
+
+    <button class="btn" type="submit">Reset</button>
+  </form>
+</div>

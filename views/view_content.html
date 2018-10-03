@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="viewContent">
+<%include header%>
+
+  <body ng-controller="mainController">
+    <%include navbar%>
+      <br>
+      <br>
+      <div class="col-md-6">
+        <h3>{{content.title}}</h3>
+        <button class="btn" ng-click="toggleEdit()" ng-show="hasEditRights">Toggle Edit Mode</button>
+        <button class="btn" ng-click="publish()" ng-show="publishable && hasEditRights">Publish</button>
+        <!-- <canvas stuff goes here> -->
+        <div ng-repeat="panel in panels">
+          <img src="{{panel.image}}" style="border:1px solid #000000;" vspace="10">
+      </img>
+          <a href="/editPanel/{{id}}/{{panel.id}}">
+            <button class="btn" ng-show="editMode">Edit Panel</button>
+          </a>
+            <button class="btn" ng-click="deletePanel(id, panel.id)" ng-show="editMode">Delete Panel</button>
+      </div>
+      <a href="/editPanel/{{id}}/{{newPanel}}">
+        <button class="btn" ng-show="editMode">Add Panel</button>
+      </a>
+      </div>
+
+
+      <div class="col-md-6">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#info">Info</a></li>
+          <li><a data-toggle="tab" href="#comments">Comments</a></li>
+          <!-- <li><a data-toggle="tab" href="#menu2">Edit</a></li> -->
+        </ul>
+
+        <div class="tab-content">
+          <div id="info" class="tab-pane fade in active">
+            <h3>Info</h3>
+            Posted On: {{content.date_created}}<br>
+            Created by: {{content.username}}<br>
+            <!-- Contributors: {{content.contributors}} <br>-->
+            Tags: {{content.tags}}
+             <button type="add_tags" class="btn" ng-click="addTags()" ng-show="hasEditRights">Add Tags</button>
+         		<input type="text" ng-show="addingTags" ng-model="input.tags">
+            <br>
+            <!-- <add any other info here> -->
+            Likes: {{totalLikes}}
+            Dislikes: {{totalDislikes}}
+            <br>
+            <button type="like" class="btn" ng-click="like()">Like</button>
+            <button type="dislike" class="btn" ng-click="dislike()">Dislike</button>
+
+            <br>
+
+            <div id = "contributors">
+              <h3>Contributors</h3>
+                Contributors:
+              <div ng-repeat="contributor in contributors" | orderBy: "username">
+                <li>
+                  {{contributor.username}}
+                  <button class="btn btn-danger btn-xs" ng-click="delete_contributor(contributor)">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Remove
+                  </button>
+                </li>
+                </div>
+              <form class="form-inline">
+                Add a Contributor:<br>
+                 <input ng-model="query" type="text" placeholder="Search for a user">
+               </form>
+               <br>
+               <form name="contList">
+                 <ul>
+                <li ng-repeat="user in users | orderBy: username | filter:query">
+                  <label>{{user.username}}
+                  <input type = "radio" ng-model="$parent.username" name="username" value="{{user.username}}" ng-click="userSelected(user.id)" required /></label>
+                </li>
+              </ul>
+                <button ng-disabled="contList.$invalid" ng-click="add_contributor()">Add</button>
+              </form>
+            </div>
+            </div>
+            <div id="comments" class="tab-pane fade">
+              <h3>Comments</h3>
+              <div style="border-top: 1px solid #ddd; padding: 10px 0"
+              ng-repeat="comment in comments" ng-show="comments.length > 0">
+                <p><b>{{comment.username}}</b> - {{comment.date_posted}}</p>
+                <p>{{comment.text}}</p>
+              </div>
+              <div style="border-top: 1px solid #ddd; padding: 10px 0" ng-show="comments.length == 0">
+                <p>No comments to show</p>
+              </div>
+              <div>
+                <h4>Leave a comment</h4>
+                <textarea style="width:100%; margin:10px 0px;" class="form-control" ng-model="comment.text"></textarea>
+                <button type="button" class="btn btn-primary" ng-disabled="comment.text.length == 0"
+                ng-click="post_comment()">Post
+                </button>
+              </div>
+            </div>
+
+      </div>
+          <button type="button" class="btn btn-primary" ng-show="hasEditRights" ng-click="delete_project()">Delete Project</button>
+      </div>
+
+      <script src="/static/javascripts/view.js"></script>
+      <script>
+        //get the current comic id from backend
+        var id = <%= id%>;
+        var current_user = '<%= current_user%>';
+      </script>
+  </body>
+
+</html>

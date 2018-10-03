@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<link href="../node_modules/ng-dialog/css/ngDialog.css" rel="stylesheet">
+<html ng-app="search" ng-controller="mainController">
+<script type="text/ng-template" id="addedSubcriptionSuccess">
+	<h1>Successfully Followed</h1>
+	<p>{{ngDialogData.username}}</p> comics will now show up in your feed.
+	<div class="ngdialog-buttons">
+		<button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog()">Okay</button>
+	</div>
+</script>
+
+<head>
+	<% include header %>
+		<title>Search</title>
+
+		<script src="/static/javascripts/search.js"></script>
+</head>
+
+<body>
+	<% include navbar %>
+		<div>
+			<label> Search: </label>
+			</br>
+			<label>
+				<input type="radio" ng-model="selected.filter" value="all"> All
+			</label>
+			<input type="radio" ng-model="selected.filter" value="users"> Users
+			</label>
+			<input type="radio" ng-model="selected.filter" value="comics"> Comics
+			</label> 
+			<form>
+				<label>Search:</label>
+				<input type="text" placeholder="Enter search" ng-model="input">
+				<button type="submit" class="btn" ng-click="callSearch()">Search</button>
+			</form>
+			<div ng-repeat="result in results" style="margin: 20px 0;">
+				<a ng-href="/view/{{result.id}}" style="font-size:20px">
+					{{result.displayName}}
+				</a>
+				<button ng-if="!result.subscribed" type="button" class="btn btn-xs btn-primary" ng-click="follow(result)">Follow
+				</button>
+				<button ng-if="result.subscribed" type="button" class="btn btn-xs btn-primary" ng-click="unfollow(result)">Unfollow
+				</button>
+
+			</div>
+		</div>
+		<div ng-show="noResults">
+			No results found
+		</div>
+</body>
+
+</html>

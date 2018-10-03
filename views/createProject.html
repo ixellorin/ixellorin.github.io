@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="createProject"  ng-controller="mainController">
+<head>
+	<% include header %>
+<title>Search</title>
+    <script type="text/javascript" src="../node_modules/angular/angular.js"></script>
+	<script src="/static/javascripts/createProject.js"></script>
+</head>
+
+<body>
+	<% include navbar %>
+	<div ng-show="isContributor">
+	<div>
+	<form>
+		<label>Comic Title:</label>
+		<input type="text" placeholder="Title" ng-model="title">
+    </form>
+	   </div>
+     <div>
+       <form>
+     		<label>Tags:</label>
+     		<input type="text" placeholder="Enter tags" ng-model="tags">
+         </form>
+     </div>
+	 </div>
+	 <div ng-hide="isContributor">
+		 Unfortunately, you are not a contributor, please click cancel to go back.
+	 </div>
+     <div>
+         <button class="btn" ng-click="cancelCreation()">Cancel</button>
+         <button class="btn" ng-show="isContributor" ng-click="createProject()">Create!</button>
+     </div>
+		 <div ng-show="showComplete">
+			 Your project is ready! Go to the My Contributions page and select your new comic to begin editing!
+		 </div>
+</body>
+<script>
+
+var account_type = '<%= account_type%>';
+
+</script>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="profile">
+<% include header %>
+
+<body ng-controller="mainController">
+  <% include navbar %>
+  <h2>Profile</h2>
+  <p>Welcome to your profile page, here you may make changes to your email and/or password.</p>
+
+  <br>
+
+  <p>Change password</p>
+  <form name="ChangePasswordForm">
+    <div class="input-group">
+      <input type="password" class="form-control" ng-model="passwordChange.password" placeholder="Current Password" required>
+    </div>
+    <div class="input-group">
+      <input type="password" class="form-control" ng-model="passwordChange.newPassword" placeholder="New Password" required>
+    </div>
+    <div class="input-group">
+      <input type="password" class="form-control" ng-model="passwordChange.confirmNewPassword" placeholder="Confirm New Password" required>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" ng-click="changePassword()">Change Password</button>
+    </div>
+  </form>
+
+  <br>
+
+  <p>Change email</p>
+  <form name="ChangeEmailForm">
+    <div class="input-group">
+      <input type="text" class="form-control" ng-model="emailChange.oldEmail" placeholder="Current Email" required>
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" ng-model="emailChange.newEmail" placeholder="New Email" required>
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" ng-model="emailChange.confirmNewEmail" placeholder="Confirm New Email" required>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" ng-click="changeEmail()">Change Email</button>
+    </div>
+  </form>
+
+  <h3>Subscriptions</h3>
+  <div ng-repeat="subscription in subscriptions"  style="margin: 20px 0;">
+    {{subscription.username}}
+    <button  type="button"
+    class="btn btn-xs btn-primary" ng-click="unfollow(subscription)">Unfollow
+    </button>
+  </div>
+  <script src="/controllers/profile.js"></script>
+  <script type="text/ng-template" id="success">
+    <h1>Email Change Successful</h1>
+    <p>Your email has been changed successfully</p>
+    <div class="ngdialog-buttons">
+      <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog()">Okay</button>
+    </div>
+  </script>
+</body>

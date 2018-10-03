@@ -1,0 +1,31 @@
+<head>
+  <link rel="stylesheet" href="/static/stylesheets/bootstrap.min.css">
+</head>
+
+<div class="container">
+  <form method="POST" action="/resetPass" class="login-form">
+    <h2 class="register-header">Reset Password</h2>
+
+    <label for="emailInput" class="credential">Email</label>
+    <input type="text" id="emailInput" name="email" class="form-control" placeholder="Email" required autofocus>
+
+    <br>
+
+    <label for="usernameInput" class="credential">Username</label>
+    <input type="text" id="usernameInput" name="username" class="form-control" placeholder="Username" required autofocus>
+
+    <br>
+
+    <label for="passwordInput" class="credential">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="Password" required>
+
+    <br>
+
+    <label for="confirmPasswordInput" class="credential">Confirm Password</label>
+    <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" required>
+
+    <br>
+
+    <button class="btn" type="submit">Reset</button>
+  </form>
+</div>

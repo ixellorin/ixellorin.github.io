@@ -1,0 +1,37 @@
+<head>
+  <link rel="stylesheet" href="/static/stylesheets/bootstrap.min.css">
+</head>
+
+<div class="container">
+  <form method="POST" action="/register" class="login-form">
+    <h2 class="register-header">Create a new account</h2>
+
+    <label for="usernameInput" class="credential">Username</label>
+    <input type="text" id="usernameInput" name="username" class="form-control" placeholder="Username" required autofocus>
+
+    <label for="passwordInput" class="credential">Password</label>
+    <input type="password" id="passwordInput" name="password" class="form-control" placeholder="Password" required autofocus>
+
+    <label for="passwordInput" class="credential">Confirm Password</label>
+    <input type="password" id="passwordInput" name="confirmPassword" class="form-control" placeholder="Confirm Password" required autofocus>
+
+    <label for="emailInput" class="credential">Email</label>
+    <input type="text" id="emailInput" name="email" class="form-control" placeholder="Email" required autofocus>
+
+    <div class="input-group">
+      Account Type:
+      <select width=100% name="account_type" required>
+        <option default disabled value="">Select an account type</option>
+        <option value="viewer">Viewer</option>
+        <option value="contributor">Contributor</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <input type="checkbox" required>
+      By checking this box I agree to the Terms and Conditions.
+    </div>
+
+    <button class="btn" type="submit">Register</button>
+  </form>
+</div>

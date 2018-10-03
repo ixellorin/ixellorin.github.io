@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="viewContent">
+<%include header%>
+
+  <body ng-controller="mainController">
+    <%include navbar%>
+      <br>
+      <br>
+      <h3>Announcements</h3>
+      <div style="border-top: 1px solid #ddd; padding: 10px 0" ng-repeat="announcement in announcements" ng-show="announcements.length > 0">
+        <b>{{announcement.title}}</b> - Posted On: {{announcement.date_posted}}
+        <p>{{announcement.text}}</p>
+      </div>
+      <div style="border-top: 1px solid #ddd; padding: 10px 0" ng-show="announcements.length == 0">
+        <p>No announcements to show</p>
+      </div>
+      <div ng-show="account_type == 'admin'">
+        <h4>Post an announcement</h4>
+        <input type="text" ng-model="announcement.title" class="form-control" placeholder="Enter a subject"></input>
+        <textarea style="width:100%; margin:10px 0px;" class="form-control" ng-model="announcement.text"></textarea>
+        <button type="button" class="btn btn-primary"
+          ng-disabled="announcement.text.length == 0 || announcement.title.length == 0"
+          ng-click="post_announcement()">Post
+        </button>
+      </div>
+      <script src="/static/javascripts/news.js"></script>
+      <script>
+        //get current user account type
+        var account_type = '<%= account_type%>';
+      </script>
+  </body>
+
+</html>
