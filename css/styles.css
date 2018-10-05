@@ -8,14 +8,14 @@ body {
   text-align: center;
   margin: 0;
   padding-left: 5;
-  background-color: #0084b4;
+  background-image: radial-gradient(ellipse farthest-corner at top left, #0084b4, white);
   color: white;
   height: 100%;
   display: block;
 }
 
 #navbar ul {
-  position: absolute;
+    position: absolute;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -74,4 +74,22 @@ body {
 
 .cover-text {
   font-size: 30px;
+}
+
+.dark-grey-button {
+  padding: 14px 16px;
+  color: white;
+  background-color: #2f2f2f;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.dark-grey-button:hover {
+    background-color: #cb881d;
+    text-decoration: none;
+    color: white;
+    border-style: solid;
+    border-color: #2f2f2f;
+    border-width: 2px;
+    border-radius: 4px;
 }
