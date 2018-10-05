@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Alef');
-
+html {
+  margin: 0;
+  height: 100%;
+}
 body {
   font-family: 'Alef', sans-serif;
+  text-align: center;
   margin: 0;
   padding-left: 5;
   background-color: #0084b4;
+  color: white;
+  height: 100%;
+  display: block;
 }
 
 #navbar ul {
+  position: absolute;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -31,4 +39,39 @@ body {
 /* Change the link color on hover */
 #navbar  li a:hover {
     background-color: #cb881d;
+}
+
+#construction-alert {
+  float: right;
+}
+
+.alert {
+  width: 50%;
+}
+
+#myModal {
+  color: black;
+}
+
+/** Cover **/
+
+.cover {
+  height: inherit;
+  width: 100vw;
+  display: table;
+
+}
+
+.inner-cover {
+  height: inherit;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.cover-heading {
+  font-size: 100px;
+}
+
+.cover-text {
+  font-size: 30px;
 }
