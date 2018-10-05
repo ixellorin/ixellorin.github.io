@@ -150,18 +150,16 @@ body {
   animation: slide-up-fade-in ease-out 2s forwards;
 }
 
-.skillset-title {
-  padding-top: 200px;
-  text-align: center;
-  flex: 30%;
-  background-color: #0084b4;
+.skillset-main {
+  flex: 65%;
+  background-color: #ffffff;
   padding: 20px;
 }
 
-.skillset-main {
-  padding-top: 200px;
-  flex: 70%;
-  background-color: #ffffff;
+.skillset-details {
+  text-align: center;
+  flex: 35%;
+  background-color: #0084b4;
   padding: 20px;
 }
 
@@ -332,4 +330,31 @@ body {
 @keyframes expand-sql-bar {
   from { width: 0% }
   to { width: 60%}
+}
+
+.skillset-details-box {
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #FFFFFF;
+  color: #0084b4;
+}
+
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  animation: slide-up-fade-in ease-out 2s forwards;
+}
+
+.experience-main {
+  flex: 65%;
+  padding: 20px;
+}
+
+.experience-side {
+  text-align: center;
+  flex: 35%;
+  padding: 20px;
 }
