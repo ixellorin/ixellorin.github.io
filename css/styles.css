@@ -133,6 +133,7 @@ body {
   padding-bottom: 50px;
   width: 100%;
   text-align: left;
+  animation: slide-up-fade-in ease-out 2s forwards;
 }
 
 .portfolio-header h1 {
@@ -146,6 +147,7 @@ body {
 .skillset-container {
   display: flex;
   flex-wrap: wrap;
+  animation: slide-up-fade-in ease-out 2s forwards;
 }
 
 .skillset-title {
