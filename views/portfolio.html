@@ -32,8 +32,44 @@
 </div>
 
 <div class="skillset-container">
+
 <div class="skillset-main">
-  <p>Software Development. Gaming. Photography.</p>
+
+  <div class="back-front-bar-container">
+    <div class="frontend-bar" style="text-align:left">Front-End</div>
+    <div class="backend-bar" style="text-align:right">Back-End</div>
+  </div>
+
+<div class="skillbar clear">
+	<div class="skillbar-title" style="background: #E44D26;"><span>HTML</span></div>
+	<div id="html-bar" class="skillbar-bar" style="background: #F16529;"></div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clear" >
+  <div class="skillbar-title" style="background: #0170BA;"><span>CSS</span></div>
+  <div id="css-bar" class="skillbar-bar" style="background: #29A9DF;"></div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clear">
+  <div class="skillbar-title" style="background: #DCC709;"><span>JavaScript</span></div>
+  <div id="js-bar" class="skillbar-bar" style="background: #F5DE19;"></div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clear">
+	<div class="skillbar-title" style="background: #C67606;"><span>Java</span></div>
+	<div id="java-bar" class="skillbar-bar" style="background: #F89917;"></div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clear">
+  <div class="skillbar-title" style="background: #27ae60;"><span>SQL</span></div>
+  <div id="sql-bar" class="skillbar-bar" style="background: #2ecc71;"></div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clear">
+	<div class="skillbar-title" style="background: #3874A6;"><span>Python</span></div>
+	<div id="python-bar" class="skillbar-bar" style="background: #5392C6;"></div>
+</div> <!-- End Skill Bar -->
+
 </div>
   <div class="skillset-title">
     <h1>Skillset</h1>
@@ -60,12 +96,16 @@
 
  <!-- Optional JavaScript -->
 
-  <script>
+  <script text="text/javascript">
   $(window).on('load',function(){
       $('#myModal').modal('show');
+      $('.skillbar').each(function(){
+        $(this).find('.skillbar-bar').animate({
+          width:$(this).attr('data-percent')
+        },6000);
+      });
   });
   </script>
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
