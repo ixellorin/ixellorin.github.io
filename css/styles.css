@@ -10,8 +10,8 @@ body {
   font-family: 'Alef', sans-serif;
   text-align: center;
   margin: 0;
-  background-image: radial-gradient(ellipse farthest-corner at top left, #0084b4, #ffffff);
-  color: #ffffff;
+  background-image: radial-gradient(ellipse farthest-corner at top left, #0084B4, #FFFFFF);
+  color: #FFFFFF;
   height: 100%;
   display: block;
 }
@@ -23,7 +23,7 @@ body {
   padding: 0;
   overflow: hidden;
   width: 100%;
-  background-color: #2f2f2f;
+  background-color: #2F2F2F;
 }
 
 #home-navbar ul {
@@ -34,7 +34,7 @@ body {
     padding: 0;
     overflow: hidden;
     width: 100%;
-    background-color: #2f2f2f;
+    background-color: #2F2F2F;
 }
 
 #navbar li, #home-navbar li {
@@ -43,7 +43,7 @@ body {
 
 #navbar li a, #home-navbar li a {
     display: block;
-    color: #ffffff;
+    color: #FFFFFF;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -51,7 +51,7 @@ body {
 
 /* Change the link color on hover */
 #navbar  li a:hover, #home-navbar li a:hover {
-    background-color: #cb881d;
+    background-color: #CB881D;
 }
 
 #construction-alert {
@@ -70,20 +70,45 @@ body {
 
 .dark-grey-button {
   padding: 14px 16px;
-  color: #ffffff;
-  background-color: #2f2f2f;
+  color: #FFFFFF;
+  background-color: #2F2F2F;
   text-align: center;
   border-radius: 6px;
 }
 
 .dark-grey-button:hover {
-    background-color: #CB881D;
-    text-decoration: none;
-    color: #FFFFFF;
-    border-style: solid;
-    border-color: #2f2f2f;
-    border-width: 2px;
-    border-radius: 4px;
+  background-color: #CB881D;
+  text-decoration: none;
+  color: #FFFFFF;
+  border-style: solid;
+  border-color: #2F2F2F;
+  border-width: 2px;
+  border-radius: 4px;
+}
+
+.transparent-button {
+  padding: 14px 16px;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+  text-align: center;
+  border-radius: 6px;
+}
+
+.transparent-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  color: #FFFFFF;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 1);
+  border-width: 2px;
+  border-radius: 4px;
+  transition: background-color 2s ease-out;
+  -webkit-transition: background-color 2s ease-out;
+  -ms-transition: background-color 2s ease-out;
+  transition: border-color 2s ease-out;
+  -webkit-transition: border-color 2s ease-out;
+  -ms-transition: border-color 2s ease-out;
 }
 
 
@@ -153,7 +178,7 @@ body {
 
 .skillset-main {
   flex: 65%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   padding: 20px;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -162,7 +187,7 @@ body {
 .skillset-details {
   text-align: center;
   flex: 35%;
-  background-color: #0084b4;
+  background-color: #0084B4;
   padding: 20px;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -180,7 +205,7 @@ body {
   padding-top: 200px;
   text-align: center;
   flex: 0%;
-  background-color: #cb881d;
+  background-color: #CB881D;
   padding: 20px;
 	-webkit-border-top-left-radius:3px;
 	-webkit-border-bottom-left-radius:4px;
@@ -238,7 +263,7 @@ body {
   width:110px;
 	font-weight:bold;
 	font-size:13px;
-	color:#ffffff;
+	color:#FFFFFF;
 	background:#6adcfa;
 	-webkit-border-top-left-radius:3px;
 	-webkit-border-bottom-left-radius:4px;
@@ -371,7 +396,7 @@ body {
   flex: 25%;
   background-color: #CB881D;
   padding: 20px;
-  padding-top: 70px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
@@ -379,20 +404,39 @@ body {
   text-decoration: none !important;
 }
 
+/* .project-box:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 2s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -ms-transition: background-color 1s ease-out;
+}
+
+.project-box > a:hover {
+  text-decoration: none !important;
+} */
+
 .job-listing {
+  background-color: #292929;
   text-decoration: none;
   color: #FFFFFF;
   text-align: left;
   border: 3px solid #CB881D;
-	-webkit-border-radius:3px;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
-	-moz-border-radius:3px;
-	border-radius:3px;
-	border-radius:3px;
+	-webkit-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border-radius: 6px;
   padding: 15px;
   margin-top: 35px;
   margin-bottom: 35px;
+}
+
+.job-listing:hover {
+  background-color: #4D4D4D;
+  transition: background-color 2s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -ms-transition: background-color 1s ease-out;
 }
 
 .job-company {
@@ -408,6 +452,106 @@ body {
 }
 
 .job-title {
+  padding: 0px;
+  margin: 0px;
+  font-size: 18px;
+}
+
+.projects-wrapper {
+  text-align: center;
+  background-image: radial-gradient(ellipse farthest-corner at top left, #0084B4, #FFFFFF);
+  padding-bottom: 5%;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  animation: slide-up-fade-in ease-out 2s forwards;
+}
+
+.project-box {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFFF;
+  flex: 25%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 3px solid #FFFFFF;
+	-webkit-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border-radius: 10px;
+  padding: 20px;
+  margin: 25px;
+}
+
+.project-box > a {
+  text-decoration: none !important;
+  color: #FFFFFF;
+}
+
+.project-box:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 2s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -ms-transition: background-color 1s ease-out;
+}
+
+.project-box > a:hover {
+  text-decoration: none !important;
+}
+
+.project-box.final {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFFF;
+  flex: 25%;
+  max-width: 30.5%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 3px solid #FFFFFF;
+	-webkit-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border-radius: 10px;
+  padding: 20px;
+  margin: 25px;
+}
+
+.project-box.final > a {
+  text-decoration: none !important;
+  color: #FFFFFF;
+}
+
+.project-box.final:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 2s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -ms-transition: background-color 1s ease-out;
+}
+
+.project-box.final > a:hover {
+  text-decoration: none !important;
+}
+
+.project-anchor {
+  text-decoration: none !important;
+}
+
+
+.project-title {
+
+}
+
+.project-details {
+  font-size: 18px;
+  font-weight: lighter;
+  font-style: oblique;
+}
+
+.project-description {
   padding: 0px;
   margin: 0px;
   font-size: 18px;
