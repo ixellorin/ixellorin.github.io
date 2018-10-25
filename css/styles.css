@@ -143,6 +143,8 @@ body {
 #portfolio-button {
   animation: slide-up-fade-in ease-out 2s forwards;
   animation-delay: 3s;
+  font-size: 24px;
+  font-weight: lighter;
 }
 
 @keyframes slide-up-fade-in {

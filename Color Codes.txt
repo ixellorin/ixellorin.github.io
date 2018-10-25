@@ -1,0 +1,6 @@
+Border: CB881D ; 203 136 29
+Font (orange): CB881D ; 203 136 29
+Font (white): FFFFFF ; 255 255 255
+Background (dark grey): 292929 ; 41 41 41
+Background Watermark: 2F2F2F ; 47 47 47
+Background (blue): 0084B4 ; 0 132 180
