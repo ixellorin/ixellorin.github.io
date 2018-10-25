@@ -14,6 +14,7 @@ body {
   color: #FFFFFF;
   height: 100%;
   display: block;
+  align-items: center;
 }
 
 
@@ -26,16 +27,6 @@ body {
   background-color: #2F2F2F;
 }
 
-#home-navbar ul {
-    position: absolute;
-    top: 0px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-    background-color: #2F2F2F;
-}
 
 #navbar li, #home-navbar li {
     float: left;
@@ -66,6 +57,27 @@ body {
   color: black;
 }
 
+.circle-image-container {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circle-image-container.header-image-container {
+  top: 25px;
+  margin-right: 50px;
+  display: inline-block;
+}
+
+.circle-image {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
 /* Buttons */
 
 .dark-grey-button {
@@ -92,7 +104,8 @@ body {
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0);
   text-align: center;
-  border-radius: 6px;
+  border-width: 2px;
+  border-radius: 4px;
 }
 
 .transparent-button:hover {
@@ -115,15 +128,24 @@ body {
 /* Home */
 
 .cover {
-  height: inherit;
-  width: 100vw;
-  display: table;
-
+  text-align: left;
+  height: 50%;
+  width: 100%;
+  display: block;
+  align-items: center;
 }
+
 .inner-cover {
-  height: inherit;
-  display: table-cell;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
   vertical-align: middle;
+  position: relative;
+  padding-top: 2%;
 }
 
 .cover-heading {
@@ -150,6 +172,69 @@ body {
 @keyframes slide-up-fade-in {
   from  { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* .find-me {
+  width: 100%;
+  height: auto;
+  background-color: #0084B4;
+  align-items: center;
+  vertical-align: middle;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.find-me-row {
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  vertical-align: middle;
+  width: 100%;
+} */
+
+.find-me {
+  text-align: left;
+  height: auto;
+  width: 100%;
+  background-color: #0084B4;
+  display: block;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.find-me-row {
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  vertical-align: middle;
+  position: relative;
+}
+
+.find-me-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.find-me-column {
+  align-items: center;
+  vertical-align: middle;
+  float: left;
+  width: 16%;
+  height:100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.find-me-image{
+  display: block;
+  margin: 0 auto;
+  width: 100px;
 }
 
 /* Portfolio */
