@@ -166,8 +166,8 @@
  <!-- Projects Container -->
  <div class="projects-container" style="text-align:center;">
 
-    <div class="project-box">
-       <a class="project-anchor" href="https://github.com/ixellorin/Enron">
+    <div class="project-box" id="enron-project">
+       <a class="project-anchor" id="enron-anchor" href="https://github.com/ixellorin/Enron">
          <h1 class="project-title">Enron Emails TF-IDF</h1>
         <p class="project-details">Personal Project | SEP 2018 - PRESENT | Python</p>
         <p class="project-description">Playground for the Enron emails dataset. Running term frequency-inverse document frequency.</p>
@@ -182,7 +182,7 @@
      </a>
     </div>
 
-    <div class="project-box">
+    <div class="project-box" id="source-project">
       <a class="project-anchor" href="https://globalgamejam.org/2016/games/source">
         <h1 class="project-title">Source</h1>
        <p class="project-details">Global Game Jam 2016 | Blender, Unity, C#</p>
@@ -190,7 +190,7 @@
      </a>
     </div>
 
-    <div class="project-box">
+    <div class="project-box" id="freeze-frame-project">
       <a class="project-anchor" href="https://globalgamejam.org/2015/games/freeze-frame">
         <h1 class="project-title">Freeze Frame</h1>
        <p class="project-details">Global Game Jam 2015 | Unity, C#</p>
@@ -198,7 +198,7 @@
      </a>
     </div>
 
-    <div class="project-box">
+    <div class="project-box" id="pokemon-project">
       <a class="project-anchor" href="https://github.com/ixellorin/PokemonDB">
         <h1 class="project-title">Pok&eacute;mon Database</h1>
        <p class="project-details">School Project | JUN 2014 | PHP, SQL</p>
@@ -206,7 +206,7 @@
      </a>
     </div>
 
-    <div class="project-box">
+    <div class="project-box" >
       <a class="project-anchor" href="https://github.com/ixellorin/FRP-BC">
         <h1 class="project-title">FRP-BC Mapper</h1>
        <p class="project-details">Think Global, Hack Local Hackathon 2013 | Java (Android)</p>
@@ -255,57 +255,7 @@
 
  <!-- Optional JavaScript -->
 
-<script text="text/javascript">
-
-$('#atr').hover(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/kyoto.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
-  $('#visier-listing').animate({opacity: "0"}, 500);
-  $('#ames-listing').animate({opacity: "0"}, 500);
-}).mouseleave(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css("background-image", "none");
-  $('#visier-listing').animate({opacity: "1"}, 500);
-  $('#ames-listing').animate({opacity: "1"}, 500);
-});
-
-$('#ames').hover(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/vancouver_2.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
-  $('#atr-listing').animate({opacity: "0"}, 500);
-  $('#visier-listing').animate({opacity: "0"}, 500);
-}).mouseleave(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css("background-image", "none");
-  $('#visier-listing').animate({opacity: "1"}, 500);
-  $('#atr-listing').animate({opacity: "1"}, 500);
-});
-
-$('#visier').hover(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/vancouver.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
-  $('#atr-listing').animate({opacity: "0"}, 500);
-  $('#ames-listing').animate({opacity: "0"}, 500);
-}).mouseleave(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css("background-image", "none");
-  $('#atr-listing').animate({opacity: "1"}, 500);
-  $('#ames-listing').animate({opacity: "1"}, 500);
-});
-
-</script>
+<script text="text/javascript" src="../js/portfolio.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

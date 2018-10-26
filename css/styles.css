@@ -481,11 +481,6 @@ body {
   padding-bottom: 60px;
 }
 
-#jobs-background {
-  position: absolute;
-  opacity: 0;
-}
-
 .job-anchor {
   text-decoration: none !important;
 }
