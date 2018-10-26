@@ -149,22 +149,16 @@ body {
 }
 
 .cover-heading {
-  opacity: 0;
   font-size: 100px;
-  animation: slide-up-fade-in ease-out 2s forwards;
-  animation-delay: 1s;
 }
 
 .cover-text {
-  opacity: 0;
   font-size: 30px;
-  animation: slide-up-fade-in ease-out 2s forwards;
-  animation-delay: 2s;
 }
 
 #portfolio-button {
   animation: slide-up-fade-in ease-out 2s forwards;
-  animation-delay: 3s;
+  animation-delay: 1s;
   font-size: 24px;
   font-weight: lighter;
 }
