@@ -125,7 +125,7 @@
 
     <!-- ATR -->
     <a class="job-anchor" id="atr" href="http://www.geminoid.jp/en/projects.html">
-      <div class="job-listing">
+      <div class="job-listing" id="atr-listing">
         <h3 class="job-company">Advanced Telecommunications Research Institute International (ATR)</h3>
         <p class="job-details">JAN 2017 - AUG 2017 | KYOTO, JAPAN</p>
         <p class="job-title">Robot Control Software Developer (Project ERICA, Hiroshi Ishiguro Laboratories)- Java</p>
@@ -134,7 +134,7 @@
 
     <!-- AMES -->
     <a class="job-anchor" id="ames" href="https://accesstomedia.org/">
-      <div class="job-listing">
+      <div class="job-listing" id="ames-listing">
         <h3 class="job-company">Access to Media Education Society</h3>
         <p class="job-details">MAY 2016 - AUG 2016 | VANCOUVER, BC</p>
         <p class="job-title">Web Developer, Designer - HTML, CSS</p>
@@ -143,7 +143,7 @@
 
     <!-- VISIER -->
     <a class="job-anchor" id="visier" href="https://www.visier.com/">
-      <div class="job-listing">
+      <div class="job-listing" id="visier-listing">
         <h3 class="job-company">Visier Inc.</h3>
         <p class="job-details">SEP 2014 - AUG 2015 | VANCOUVER, BC</p>
         <p class="job-title">Workforce Analytics Software Developer (co-op) - ActionScript, XML, Flex</p>
@@ -256,28 +256,57 @@
  <!-- Optional JavaScript -->
 
 <script text="text/javascript">
+
 $('#atr').hover(function() {
+  $('#atr-listing').finish();
+  $('#ames-listing').finish();
+  $('#visier-listing').finish();
   $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/kyoto.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+  $('#visier-listing').animate({opacity: "0"}, 500);
+  $('#ames-listing').animate({opacity: "0"}, 500);
 }).mouseleave(function() {
+  $('#atr-listing').finish();
+  $('#ames-listing').finish();
+  $('#visier-listing').finish();
   $('#jobs').css("background-image", "none");
+  $('#visier-listing').animate({opacity: "1"}, 500);
+  $('#ames-listing').animate({opacity: "1"}, 500);
 });
 
 $('#ames').hover(function() {
-  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/galiano.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+  $('#atr-listing').finish();
+  $('#ames-listing').finish();
+  $('#visier-listing').finish();
+  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/vancouver_2.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+  $('#atr-listing').animate({opacity: "0"}, 500);
+  $('#visier-listing').animate({opacity: "0"}, 500);
 }).mouseleave(function() {
+  $('#atr-listing').finish();
+  $('#ames-listing').finish();
+  $('#visier-listing').finish();
   $('#jobs').css("background-image", "none");
+  $('#visier-listing').animate({opacity: "1"}, 500);
+  $('#atr-listing').animate({opacity: "1"}, 500);
 });
 
 $('#visier').hover(function() {
+  $('#atr-listing').finish();
+  $('#ames-listing').finish();
+  $('#visier-listing').finish();
   $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/vancouver.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+  $('#atr-listing').animate({opacity: "0"}, 500);
+  $('#ames-listing').animate({opacity: "0"}, 500);
 }).mouseleave(function() {
+  $('#atr-listing').finish();
+  $('#ames-listing').finish();
+  $('#visier-listing').finish();
   $('#jobs').css("background-image", "none");
+  $('#atr-listing').animate({opacity: "1"}, 500);
+  $('#ames-listing').animate({opacity: "1"}, 500);
 });
-
 
 </script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
