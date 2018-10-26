@@ -257,11 +257,24 @@
 
 <script text="text/javascript">
 $('#atr').hover(function() {
-  $('#jobs').css("background-image",
-"url(https://ixellorin.github.io/images/jobs/kyoto.png)");
+  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/kyoto.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
 }).mouseleave(function() {
-  $('#container').css("background-image", "none");
+  $('#jobs').css("background-image", "none");
 });
+
+$('#ames').hover(function() {
+  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/galiano.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+}).mouseleave(function() {
+  $('#jobs').css("background-image", "none");
+});
+
+$('#visier').hover(function() {
+  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/vancouver.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+}).mouseleave(function() {
+  $('#jobs').css("background-image", "none");
+});
+
+
 </script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

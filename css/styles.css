@@ -481,6 +481,11 @@ body {
   padding-bottom: 60px;
 }
 
+#jobs-background {
+  position: absolute;
+  opacity: 0;
+}
+
 .job-anchor {
   text-decoration: none !important;
 }
@@ -497,7 +502,7 @@ body {
 } */
 
 .job-listing {
-  background-color: #292929;
+  background-color: transparent;
   text-decoration: none;
   color: #FFFFFF;
   text-align: left;
@@ -514,7 +519,7 @@ body {
 }
 
 .job-listing:hover {
-  background-color: #4D4D4D;
+  background-color: rgba(0, 0, 0, 0.8);
   transition: background-color 2s ease-out;
   -webkit-transition: background-color 1s ease-out;
   -ms-transition: background-color 1s ease-out;
