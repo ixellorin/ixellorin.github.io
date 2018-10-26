@@ -54,24 +54,24 @@ $('#visier').hover(function() {
 
 // hovering over source project
 
-// $('#source-project').hover(function() {
-//   $('#projects-wrapper').css({"background-image" : "url(https://ixellorin.github.io/images/projects/source.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
-// }).mouseleave(function() {
-//   $('#projects-wrapper').css("background-image", "none");
-// });
-//
-// // hovering over freezeframe project
-//
-// $('#freeze-frame-project').hover(function() {
-//   $('#projects-wrapper').css({"background-image" : "url(https://ixellorin.github.io/images/projects/freezeframe.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
-// }).mouseleave(function() {
-//   $('#projects-wrapper').css("background-image", "none");
-// });
-//
-// // hovering over pokemon projects
-//
-// $('#freeze-frame-project').hover(function() {
-//   $('#projects-wrapper').css({"background-image" : "url(https://ixellorin.github.io/images/projects/Pokemon_search.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
-// }).mouseleave(function() {
-//   $('#projects-wrapper').css("background-image", "none");
-// });
+$('#source-project').hover(function() {
+  $('#source-project').css({"background-image" : "url(https://ixellorin.github.io/images/projects/source_2.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%", "overflow" : "hidden"});
+}).mouseleave(function() {
+  $('#source-project').css("background-image", "none");
+});
+
+// hovering over freezeframe project
+
+$('#freeze-frame-project').hover(function() {
+  $('#freeze-frame-project').css({"background-image" : "url(https://ixellorin.github.io/images/projects/freezeframe_2.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+}).mouseleave(function() {
+  $('#freeze-frame-project').css("background-image", "none");
+});
+
+// hovering over pokemon projects
+
+$('#pokemon-project').hover(function() {
+  $('#pokemon-project').css({"background-image" : "url(https://ixellorin.github.io/images/projects/Pokemon_search_2.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+}).mouseleave(function() {
+  $('#pokemon-project').css("background-image", "none");
+});
