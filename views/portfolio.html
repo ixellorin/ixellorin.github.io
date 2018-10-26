@@ -121,10 +121,10 @@
 
 <!-- Begin Job Listings -->
 
-  <div class="experience-main">
+  <div class="experience-main" id="jobs">
 
     <!-- ATR -->
-    <a class="job-anchor" href="http://www.geminoid.jp/en/projects.html">
+    <a class="job-anchor" id="atr" href="http://www.geminoid.jp/en/projects.html">
       <div class="job-listing">
         <h3 class="job-company">Advanced Telecommunications Research Institute International (ATR)</h3>
         <p class="job-details">JAN 2017 - AUG 2017 | KYOTO, JAPAN</p>
@@ -133,7 +133,7 @@
     </a>
 
     <!-- AMES -->
-    <a class="job-anchor" href="https://accesstomedia.org/">
+    <a class="job-anchor" id="ames" href="https://accesstomedia.org/">
       <div class="job-listing">
         <h3 class="job-company">Access to Media Education Society</h3>
         <p class="job-details">MAY 2016 - AUG 2016 | VANCOUVER, BC</p>
@@ -142,7 +142,7 @@
     </a>
 
     <!-- VISIER -->
-    <a class="job-anchor" href="https://www.visier.com/">
+    <a class="job-anchor" id="visier" href="https://www.visier.com/">
       <div class="job-listing">
         <h3 class="job-company">Visier Inc.</h3>
         <p class="job-details">SEP 2014 - AUG 2015 | VANCOUVER, BC</p>
@@ -255,11 +255,14 @@
 
  <!-- Optional JavaScript -->
 
-  <!-- <script text="text/javascript">
-  $(window).on('load',function(){
-      $('#myModal').modal('show');
-  });
-  </script> -->
+<script text="text/javascript">
+$('#atr').hover(function() {
+  $('#jobs').css("background-image",
+"url(https://ixellorin.github.io/images/jobs/kyoto.png)");
+}).mouseleave(function() {
+  $('#container').css("background-image", "none");
+});
+</script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
