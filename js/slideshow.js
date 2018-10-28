@@ -1,27 +1,44 @@
-var images=new Array(
-  '../images/about/slideshow/black_tusk_gear.png',
-  '../images/about/slideshow/nara_fireworks_2.png',
-  '../images/about/slideshow/steveston_bookstore.png',
-  '../images/about/slideshow/black_tusk_view.png',
-  '../images/about/slideshow/stevestone_rocanini');
+var duration = 3; // duration in seconds
+var fadeAmount = .3; // fade duration amount relative to the time the image is visible
 
-var nextimage=0;
+$(document).ready(function (){
+  var images = $(".slideshowimage");
+  var numImages = images.length;
+  console.log(numImages);
+  var durationMs = duration * 10000;
+  var imageTime = durationMs / numImages; // time the image is visible
+  var fadeTime = imageTime * fadeAmount; // time for cross fading
+  var visibleTime = imageTime  - (imageTime * fadeAmount * 2);// time the image is visible with opacity == 1
+  var animDelay = visibleTime * (numImages - 1) + fadeTime * (numImages - 2); // animation delay/offset for a single image
 
-doSlideshow();
-
-function doSlideshow() {
-      if ($('.slideshowimage').length!=0) {
-        $('.slideshowimage').fadeOut(1000,function(){slideshowFadeIn();$(this).remove()});
-      } else {
-        slideshowFadeIn();
-      }
+  images.each( function( index, element ){
+    if(index != 0){
+      $(element).css("opacity","0");
+      setTimeout(function(){
+        doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
+      },visibleTime*index + fadeTime*(index-1));
+    }else{
+      setTimeout(function(){
+        $(element).animate({opacity:0},fadeTime, function(){
+          setTimeout(function(){
+            doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
+          },animDelay )
+        });
+      },visibleTime);
     }
+  });
+});
 
-function slideshowFadeIn() {
-  $('.bg-slideshow').prepend($('<img class="slideshowimage" src="'+images[nextimage++]+'" style="display:none">').fadeIn(1000,
-    function() {
-      setTimeout(doSlideshow,3000);
-    }));
-    if(nextimage>=images.length)
-        nextimage=0;
+// creates a animation loop
+function doAnimationLoop(element, fadeInTime, visibleTime, fadeOutTime, pauseTime){
+  fadeInOut(element,fadeInTime, visibleTime, fadeOutTime ,function(){
+    setTimeout(function(){
+      doAnimationLoop(element, fadeInTime, visibleTime, fadeOutTime, pauseTime);
+    },pauseTime);
+  });
+}
+
+// shorthand for in- and out-fading
+function fadeInOut( element, fadeIn, visible, fadeOut, onComplete){
+  return $(element).animate( {opacity:1}, fadeIn ).delay( visible ).animate( {opacity:0}, fadeOut, onComplete);
 }
