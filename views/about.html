@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
+<body style="background-image:none">
 <head>
   <title>About | Cio Ellorin</title>
 
@@ -41,7 +41,111 @@
 
 <div class="about-header-details">
   <h1>Cio Ellorin</h1>
+  <p>Hi! My name is Cio, and I'm a Software Developer by profession! My goal as a developer is to make beautiful software that clients love using, and enables them to achieve <i>their</i> goals! I love to work with a great team, but also have experience working independently, and have worked in full, agile development life cycles! In my free time, I enjoy playing video games, photography (all those photos in the slideshow are taken by me!), hiking, and playing sports!
 </div>
+
+<!-- Begin tabs -->
+
+<div class="tabs-container">
+  <div class="tab">
+    <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'tab-current-position')">Current Position</button>
+    <button class="tablinks" onclick="openCity(event, 'tab-my-story')">My Story</button>
+    <button class="tablinks" onclick="openCity(event, 'tab-previous-experience')">Previous Experience</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="tab-current-position" class="tabcontent">
+    <h3>For Hire!</h3>
+    <p>I am currently looking for a job! If you're interested in hiring me, I can be contacted via email.
+      <br>
+      <br>iellorin@gmail.com or iellorin@hotmail.com</p>
+  </div>
+
+  <div id="tab-my-story" class="tabcontent">
+    <h3>My Story</h3>
+    <p style="text-align:left">I loved video games ever since I was a kid. My uncle had bought my siblings and I a Nintendo 64, and I fell in love. From early on, I knew what I wanted to do when I grew up: I wanted to make video games. In high school, my IT class introduced me to a simple scripting tool called Guido Van Robot (GVR), and it was then that I realized it wasn't just video games that I wanted to create, I want to <i>make anything do something</i>, and I had that 'aha!' moment where I realized I just wanted to build software as a career!
+
+      <br>
+      <br> I applied to the University of British Columbia's Faculty of Science, and, in my first year, declared my Major in Computer Science. I spent six years studying there, gaining 24 months of real work experience along the way through completing the Co-Op program. I worked in Vancouver for VISIER while it was still expanding, Access to Media Education Society - a non-profit organization, and I worked in Japan for eight months developing software for robotics researchers! Finally, here I am today!
+    </p>
+  </div>
+
+  <div id="tab-previous-experience" class="tabcontent" style="margin-left:0px;margin-right:0px;">
+    <!-- ATR -->
+    <div class="tab-previous-experience-job">
+      <div class="tab-about-previous-experience">
+        <h4>Advanced Telecommunications Research Institute International (ATR)</h4>
+        <p>JAN 2017 - AUG 2017 | KYOTO, JAPAN
+          <br>Robot Control Software Developer (Project ERICA, Hiroshi Ishiguro Laboratories)- Java
+        </p>
+      </div>
+        <img src="../images/jobs/atr.png">
+    </div>
+
+    <!-- AMES -->
+    <div class="tab-previous-experience-job">
+      <div class="tab-about-previous-experience">
+        <h4>Access to Media Education Society</h4>
+        <p>MAY 2016 - AUG 2016 | VANCOUVER, BC
+          <br>Web Developer, Designer - HTML, CSS
+        </p>
+      </div>
+        <img src="../images/jobs/ames.png">
+    </div>
+
+    <!-- VISIER -->
+    <div class="tab-previous-experience-job">
+      <div class="tab-about-previous-experience">
+        <h4>Visier Inc.</h4>
+        <p>SEP 2014 - AUG 2015 | VANCOUVER, BC
+          <br>Workforce Analytics Software Developer (co-op) - ActionScript, XML, Flex
+        </p>
+      </div>
+        <img src="../images/jobs/visier.png">
+    </div>
+  </div>
+</div>
+
+<!-- End tabs -->
+
+<!-- Find me div -->
+<div class="find-me">
+  <div class="find-me-row">
+    <h1 id="home-find-me" style="margin-bottom:15px;">Find me on these platforms!</h1>
+    <div class="find-me-column">
+      <a href="https://github.com/ixellorin">
+        <img class="find-me-image" src="../images/logos/github_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://www.linkedin.com/in/iellorin/">
+        <img class="find-me-image" id="linkedin-icon" src="../images/logos/linkedin_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://www.instagram.com/i_ellorin/">
+        <img class="find-me-image" id="instagram-icon" src="../images/logos/instagram_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://www.flickr.com/photos/158175735@N03/">
+        <img class="find-me-image" id="flickr-icon" src="../images/logos/flickr_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://www.twitch.tv/thecheezo">
+        <img class="find-me-image" id="twitch-icon" src="../images/logos/twitch_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://twitter.com/thecheez_o">
+        <img class="find-me-image" id="twitter-icon" src="../images/logos/twitter_white.png">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- End find me -->
 <!-- <div style="padding-top:20px">
   <h1>Oops! Looks like this page isn't done!</h1>
     <p>Sorry about that! This website is a work-in-progress, so I'll get to this as soon as possible!</p>
@@ -68,7 +172,11 @@
  <!-- Optional JavaScript -->
 
 <script text="text/javascript" src="../js/slideshow.js"></script>
-
+<script text="text/javascript" src="../js/tabs.js"></script>
+<script text="text/javascript">
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
  <!-- <script>
  $(window).on('load',function(){
      $('#myModal').modal('show');

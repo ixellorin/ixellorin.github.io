@@ -1,5 +1,5 @@
 var duration = 3; // duration in seconds
-var fadeAmount = .3; // fade duration amount relative to the time the image is visible
+var fadeAmount = .2; // fade duration amount relative to the time the image is visible
 
 $(document).ready(function (){
   var images = $(".slideshowimage");
@@ -11,16 +11,18 @@ $(document).ready(function (){
   var visibleTime = imageTime  - (imageTime * fadeAmount * 2);// time the image is visible with opacity == 1
   var animDelay = visibleTime * (numImages - 1) + fadeTime * (numImages - 2); // animation delay/offset for a single image
 
-  images.each( function( index, element ){
-    if(index != 0){
+  images.each( function( index, element ) {
+    if(index != 0) {
       $(element).css("opacity","0");
-      setTimeout(function(){
-        doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
-      },visibleTime*index + fadeTime*(index-1));
-    }else{
-      setTimeout(function(){
-        $(element).animate({opacity:0},fadeTime, function(){
-          setTimeout(function(){
+      setTimeout(
+        function() {
+          doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
+        },visibleTime*index + fadeTime*(index-1));
+    } else {
+      setTimeout(
+        function() {
+          $(element).animate({opacity:0},fadeTime, function(){
+            setTimeout(function() {
             doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
           },animDelay )
         });
