@@ -577,29 +577,68 @@ body {
   /* About */
 
   .about-header {
+    background-color: #0084B4;
     align-items: center;
     vertical-align: middle;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 0%;
     position: relative;
   }
 
   .about-header-details {
-    color: #0084B4;
-    background-color: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #0084B4;
     position: relative;
     width: 100%;
-    padding-top: 2%;
-    padding-bottom: 5%;
+    padding: 15px;
   }
 
   .about-header-details h1 {
-    font-size: 72px;
+    font-size: 42px;
   }
 
   #about-profile {
     border: 15px solid #FFFFFF;
     border-color: #FFFFFF;
+  }
+
+  .tabs-container {
+    display: none;
+  }
+
+  .about-mobile-previous-experience-job {
+    color: #0084B4;
+    padding-top: 15px;
+  }
+
+  .about-mobile-previous-experience-job img {
+    display: none;
+  }
+
+  .about-mobile-section.white {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    color: #0084B4;
+    background-color: #FFFFFF;
+  }
+
+  .about-mobile-section.white h1 {
+    color: #CB881D;
+  }
+
+  .about-mobile-section.blue {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+    background-color: #0084B4;
+  }
+
+  .about-mobile-section.blue p {
+    padding: 15px;
   }
 }
 
@@ -1349,5 +1388,13 @@ body {
    #tab-my-story p {
      margin-left: 15%;
      margin-right: 15%;
+   }
+
+   .about-mobile-section.white {
+     display: none;
+   }
+
+   .about-mobile-section.blue {
+     display: none;
    }
 }
