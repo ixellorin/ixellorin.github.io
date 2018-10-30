@@ -80,7 +80,7 @@ body {
     top: 25px;
     display: inline-block;
   }
-  
+
   .circle-image-contained {
     display: inline;
     margin: 0 auto;
@@ -357,12 +357,12 @@ body {
 
   @keyframes expand-css-bar {
     from { width: 0% }
-    to { width: 65%}
+    to { width: 75%}
   }
 
   @keyframes expand-html-bar {
     from { width: 0% }
-    to { width: 65%}
+    to { width: 75%}
   }
 
   @keyframes expand-java-bar {
@@ -377,7 +377,7 @@ body {
 
   @keyframes expand-js-bar {
     from { width: 0% }
-    to { width: 40%}
+    to { width: 50%}
   }
 
   @keyframes expand-sql-bar {
@@ -1112,12 +1112,12 @@ body {
 
   @keyframes expand-css-bar {
     from { width: 0% }
-    to { width: 65%}
+    to { width: 75%}
   }
 
   @keyframes expand-html-bar {
     from { width: 0% }
-    to { width: 65%}
+    to { width: 75%}
   }
 
   @keyframes expand-java-bar {
@@ -1132,7 +1132,7 @@ body {
 
   @keyframes expand-js-bar {
     from { width: 0% }
-    to { width: 40%}
+    to { width: 50%}
   }
 
   @keyframes expand-sql-bar {
