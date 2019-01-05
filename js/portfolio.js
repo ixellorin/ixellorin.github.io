@@ -88,7 +88,7 @@ $('#pokemon-db-project').hover(function() {
 // hovering over my-pokemon projects
 
 $('#my-pokemon-project').hover(function() {
-  $('#pokemon-project').css({"background-image" : "url(https://ixellorin.github.io/images/projects/my-pokemon.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+  $('#my-pokemon-project').css({"background-image" : "url(https://ixellorin.github.io/images/projects/my-pokemon.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "100% 50%"});
 }).mouseleave(function() {
-  $('#pokemon-project').css("background-image", "none");
+  $('#my-pokemon-project').css("background-image", "none");
 });
