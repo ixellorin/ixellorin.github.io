@@ -1,61 +1,64 @@
 // hovering over atr job
 
 $('#atr').hover(function() {
+  finishATRAnimation();
   $('#atr-image').animate({opacity: "1"}, 500);
-  $('#visier-listing').animate({opacity: "0"}, 500);
-  $('#ames-listing').animate({opacity: "0"}, 500);
+  $('#visier-listing').animate({opacity: "0"}, 200);
+  $('#ames-listing').animate({opacity: "0"}, 0);
 }, function() {
   finishATRAnimation();
   $('#atr-image').animate({opacity: "0"}, 500);
-  $('#visier-listing').animate({opacity: "1"}, 500);
-  $('#ames-listing').animate({opacity: "1"}, 500);
+  $('#visier-listing').animate({opacity: "1"}, 200);
+  $('#ames-listing').animate({opacity: "1"}, 0);
 });
 
 // hovering over ames job
 
 $('#ames').hover(function() {
+  finishAMESAnimation();
   $('#ames-image').animate({opacity: "1"}, 500);
-  $('#visier-listing').animate({opacity: "0"}, 500);
-  $('#atr-listing').animate({opacity: "0"}, 500);
+  $('#visier-listing').animate({opacity: "0"}, 200);
+  $('#atr-listing').animate({opacity: "0"}, 0);
 }, function() {
   finishAMESAnimation();
   $('#ames-image').animate({opacity: "0"}, 500);
-  $('#visier-listing').animate({opacity: "1"}, 500);
-  $('#atr-listing').animate({opacity: "1"}, 500);
+  $('#visier-listing').animate({opacity: "1"}, 0);
+  $('#atr-listing').animate({opacity: "1"}, 0);
 });
 
 // hovering over visier job
 
 $('#visier').hover(function() {
+  finishVisierAnimation();
   $('#visier-image').animate({opacity: "1"}, 500);
-  $('#atr-listing').animate({opacity: "0"}, 500);
-  $('#ames-listing').animate({opacity: "0"}, 500);
+  $('#atr-listing').animate({opacity: "0"}, 200);
+  $('#ames-listing').animate({opacity: "0"}, 200);
 }, function() {
   finishVisierAnimation();
   $('#visier-image').animate({opacity: "0"}, 500);
-  $('#atr-listing').animate({opacity: "1"}, 500);
-  $('#ames-listing').animate({opacity: "1"}, 500);
+  $('#atr-listing').animate({opacity: "1"}, 0);
+  $('#ames-listing').animate({opacity: "1"}, 0);
 });
 
 function finishATRAnimation() {
   $('#ames-listing').finish();
-  $('#ames-image').finish();
+  // $('#ames-image').finish();
   $('#visier-listing').finish();
-  $('#visier-image').finish();
+  // $('#visier-image').finish();
 }
 
 function finishAMESAnimation() {
   $('#atr-listing').finish();
-  $('#atr-image').finish();
+  // $('#atr-image').finish();
   $('#visier-listing').finish();
-  $('#visier-image').finish();
+  // $('#visier-image').finish();
 }
 
 function finishVisierAnimation() {
   $('#atr-listing').finish();
-  $('#atr-image').finish();
+  // $('#atr-image').finish();
   $('#ames-listing').finish();
-  $('#ames-image').finish();
+  // $('#ames-image').finish();
 }
 
 // hovering over source project
