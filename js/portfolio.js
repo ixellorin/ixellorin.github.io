@@ -1,17 +1,12 @@
 // hovering over atr job
 
 $('#atr').hover(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/kyoto.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+  $('#atr-image').animate({opacity: "1"}, 500);
   $('#visier-listing').animate({opacity: "0"}, 500);
   $('#ames-listing').animate({opacity: "0"}, 500);
-}).mouseleave(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css("background-image", "none");
+}, function() {
+  finishATRAnimation();
+  $('#atr-image').animate({opacity: "0"}, 500);
   $('#visier-listing').animate({opacity: "1"}, 500);
   $('#ames-listing').animate({opacity: "1"}, 500);
 });
@@ -19,17 +14,12 @@ $('#atr').hover(function() {
 // hovering over ames job
 
 $('#ames').hover(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/vancouver_2.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
-  $('#atr-listing').animate({opacity: "0"}, 500);
+  $('#ames-image').animate({opacity: "1"}, 500);
   $('#visier-listing').animate({opacity: "0"}, 500);
-}).mouseleave(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css("background-image", "none");
+  $('#atr-listing').animate({opacity: "0"}, 500);
+}, function() {
+  finishAMESAnimation();
+  $('#ames-image').animate({opacity: "0"}, 500);
   $('#visier-listing').animate({opacity: "1"}, 500);
   $('#atr-listing').animate({opacity: "1"}, 500);
 });
@@ -37,20 +27,36 @@ $('#ames').hover(function() {
 // hovering over visier job
 
 $('#visier').hover(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css({"background-image" : "url(https://ixellorin.github.io/images/jobs/vancouver.png)", "background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "0% 50%"});
+  $('#visier-image').animate({opacity: "1"}, 500);
   $('#atr-listing').animate({opacity: "0"}, 500);
   $('#ames-listing').animate({opacity: "0"}, 500);
-}).mouseleave(function() {
-  $('#atr-listing').finish();
-  $('#ames-listing').finish();
-  $('#visier-listing').finish();
-  $('#jobs').css("background-image", "none");
+}, function() {
+  finishVisierAnimation();
+  $('#visier-image').animate({opacity: "0"}, 500);
   $('#atr-listing').animate({opacity: "1"}, 500);
   $('#ames-listing').animate({opacity: "1"}, 500);
 });
+
+function finishATRAnimation() {
+  $('#ames-listing').finish();
+  $('#ames-image').finish();
+  $('#visier-listing').finish();
+  $('#visier-image').finish();
+}
+
+function finishAMESAnimation() {
+  $('#atr-listing').finish();
+  $('#atr-image').finish();
+  $('#visier-listing').finish();
+  $('#visier-image').finish();
+}
+
+function finishVisierAnimation() {
+  $('#atr-listing').finish();
+  $('#atr-image').finish();
+  $('#ames-listing').finish();
+  $('#ames-image').finish();
+}
 
 // hovering over source project
 
