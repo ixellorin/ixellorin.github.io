@@ -1499,6 +1499,12 @@ body {
      margin-right: 15%;
    }
 
+   #tab-natgeo p {
+     margin-left: 15%;
+     margin-right: 15%;
+   }
+
+
    .about-mobile-section.white {
      display: none;
    }
