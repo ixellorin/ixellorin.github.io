@@ -692,6 +692,94 @@ body {
   .about-mobile-section.blue p {
     padding: 15px;
   }
+
+  /* Photography */
+
+  /* Style the tab */
+  .tab {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: #FFFFFF;
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 5px solid #FFFFFF;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    border-bottom: 5px solid #CB881D;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    color: #0084B4;
+    background-color: #FFFFFF;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 20%;
+    padding-bottom: 2%;
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+
+  .tabcontent h3 {
+    font-size: 28px;
+    padding: 5px;
+  }
+
+  .tabcontent p {
+    font-size: 18px;
+  }
+
+  .photography-tabs-container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #FFFFFF;
+  }
+
+  .photography-header {
+    background-color: #FFFFFF;
+    color: #CB881D;
+    font-size: 400%;
+    margin-bottom: 0px;
+    padding-top: 2%;
+  }
+
+  .tab-photography-japan {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .tab-photography-steveston {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 
 /* For Desktop */
@@ -1515,6 +1603,12 @@ body {
    }
 
    /* Photography */
+   .photography-tabs-container {
+     padding-top: 2%;
+     padding-bottom: 2%;
+     background-color: #FFFFFF;
+   }
+
    .photography-header {
      background-color: #FFFFFF;
      color: #CB881D;
