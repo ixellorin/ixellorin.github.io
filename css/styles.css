@@ -1472,6 +1472,7 @@ body {
   .tabs-container {
     padding-top: 2%;
     padding-bottom: 2%;
+    background-color: #FFFFFF;
   }
 
   .tabcontent h3 {
@@ -1511,5 +1512,26 @@ body {
 
    .about-mobile-section.blue {
      display: none;
+   }
+
+   /* Photography */
+   .photography-header {
+     background-color: #FFFFFF;
+     color: #CB881D;
+     font-size: 400%;
+     margin-bottom: 0px;
+     padding-top: 2%;
+   }
+
+   .tab-photography-japan {
+     text-align: center;
+     margin-left: 15%;
+     margin-right: 15%;
+   }
+
+   .tab-photography-steveston {
+     text-align: center;
+     margin-left: 15%;
+     margin-right: 15%;
    }
 }

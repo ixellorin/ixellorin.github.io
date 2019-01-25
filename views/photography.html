@@ -1,64 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<head>
-  <title>Photography | Cio Ellorin</title>
+  <head>
+    <title>Photography | Cio Ellorin</title>
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../css/styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
 
 
 <div id="navbar">
   <ul>
     <li><a href="../index.html">Home</a></li>
     <li><a href="./portfolio.html">Portfolio</a></li>
-    <li><a href="./gaming.html">Gaming</a></li>
-    <li><a href="./photography.html">Photography</a></li>
     <li><a href="./about.html">About</a></li>
-    <li><a href="./contact.html">Contact</a></li>
+    <li><a href="./photography.html">Photography</a></li>
     <!-- <img src="../images/logos/cio-logo-small.png" style="max-width: 40px;padding-top:7px;padding-right:5px;float:right;"> -->
   </ul>
 </div>
+<div >
+  <h1 class="photography-header">Photography</h1>
+</div>
+<!-- Begin tabs -->
 
+<div class="tabs-container">
+  <div class="tab">
+    <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'tab-photography-japan')">Japan</button>
+    <button class="tablinks" onclick="openCity(event, 'tab-photography-steveston')">Steveston</button>
+    <button class="tablinks" onclick="openCity(event, 'tab-photography-wildlife')">Wildlife</button>
+  </div>
 
-<div style="padding-top:20px">
-  <h1>Oops! Looks like this page isn't done!</h1>
-    <p>Sorry about that! This website is a work-in-progress, so I'll get to this as soon as possible!</p>
+  <!-- Tab content -->
+  <div id="tab-photography-japan" class="tabcontent">
+    <h3>Japan 2017</h3>
+    <p>I spent 8 months in Japan as an intern in Kyoto; here's the whole lot!</p>
+    <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157667814114167" title="Japan 2017 (Jan - Aug)"><img src="https://farm2.staticflickr.com/1725/41709363195_3f2c74c834_c.jpg" width="800" height="534" alt="Japan 2017 (Jan - Aug)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  </div>
+
+  <div id="tab-photography-steveston" class="tabcontent" style="margin-left:0px;margin-right:0px;">
+    <h3>Steveston, Richmond</h3>
+    <p>Steveston is one of my places to go for a quiet walk. It is located on the west end of Richmond.</p>
+    <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157701489279731" title="Steveston (2016)"><img src="https://farm2.staticflickr.com/1922/45596300522_354c62a667_c.jpg" width="800" height="520" alt="Steveston (2016)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  </div>
+
+  <div id="tab-photography-wildlife" class="tabcontent" style="margin-left:0px;margin-right:0px;">
+    <h3>Wildlife</h3>
+    <p>I love nature, and I love animals. There's something about capturing the beauty of an animal in the wild that captivates me. Here's a showcase of some of the wildlife photos I've taken.</p>
+    <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157701597450751" title="Animals (all)"><img src="https://farm2.staticflickr.com/1970/45646831771_8da07afc52_c.jpg" width="800" height="534" alt="Animals (all)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  </div>
 </div>
 
-<!-- Modal -->
- <div class="modal fade" id="myModal" role="dialog">
-   <div class="modal-dialog">
+<!-- End tabs -->
 
-     <!-- Modal content-->
-     <div class="modal-content">
-       <div class="modal-header">
-       <h4 class="modal-title">Under Construction!</h4>
-         <button type="button" class="close" data-dismiss="modal">&times;</button>
-       </div>
-       <div class="modal-body">
-         <p>I am currently building and improving this website so you may notice some hiccups, hitches, and missing features!</p>
-       </div>
-     </div>
-
-   </div>
- </div>
+<!-- Find me div -->
+<div class="find-me">
+  <div class="find-me-row">
+    <h1 id="home-find-me" style="margin-bottom:15px;">Find me on these platforms!</h1>
+    <div class="find-me-column">
+      <a href="https://github.com/ixellorin">
+        <img class="find-me-image" src="../images/logos/github_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://www.linkedin.com/in/iellorin/">
+        <img class="find-me-image" id="linkedin-icon" src="../images/logos/linkedin_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://www.instagram.com/i_ellorin/">
+        <img class="find-me-image" id="instagram-icon" src="../images/logos/instagram_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://www.flickr.com/photos/158175735@N03/">
+        <img class="find-me-image" id="flickr-icon" src="../images/logos/flickr_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://www.twitch.tv/thecheezo">
+        <img class="find-me-image" id="twitch-icon" src="../images/logos/twitch_white.png">
+      </a>
+    </div>
+    <div class="find-me-column">
+      <a href="https://twitter.com/thecheez_o">
+        <img class="find-me-image" id="twitter-icon" src="../images/logos/twitter_white.png">
+      </a>
+    </div>
+  </div>
+</div>
 
  <!-- Optional JavaScript -->
 
- <script>
- $(window).on('load',function(){
-     $('#myModal').modal('show');
- });
+ <script text="text/javascript" src="../js/tabs.js"></script>
+ <script text="text/javascript">
+ // Get the element with id="defaultOpen" and click on it
+ document.getElementById("defaultOpen").click();
  </script>
-
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
