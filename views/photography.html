@@ -34,8 +34,8 @@
 <div class="photography-tabs-container">
   <div class="tab">
     <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'tab-photography-japan')">Japan</button>
-    <button class="tablinks" onclick="openCity(event, 'tab-photography-steveston')">Steveston</button>
-    <button class="tablinks" onclick="openCity(event, 'tab-photography-wildlife')">Wildlife</button>
+    <button class="tablinks" id="firstOpen" onclick="openCity(event, 'tab-photography-steveston')">Steveston</button>
+    <button class="tablinks" id="secondOpen" onclick="openCity(event, 'tab-photography-wildlife')">Wildlife</button>
   </div>
 
   <!-- Tab content -->
@@ -102,6 +102,8 @@
  <script text="text/javascript" src="../js/tabs.js"></script>
  <script text="text/javascript">
  // Get the element with id="defaultOpen" and click on it
+ document.getElementById("firstOpen").click();
+ document.getElementById("secondOpen").click();
  document.getElementById("defaultOpen").click();
  </script>
 
