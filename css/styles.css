@@ -769,13 +769,13 @@ body {
     padding-top: 2%;
   }
 
-  .tab-photography-japan {
+  .tab-photography-flickr {
     text-align: center;
     margin-left: 15%;
     margin-right: 15%;
   }
 
-  .tab-photography-steveston {
+  .tab-photography-instagram {
     text-align: center;
     margin-left: 15%;
     margin-right: 15%;
@@ -1617,20 +1617,35 @@ body {
      padding-top: 2%;
    }
 
-   .tab-photography-japan {
+   .tab-photography-flickr {
      text-align: center;
      margin-left: 15%;
      margin-right: 15%;
    }
 
-   .tab-photography-steveston {
-     text-align: center;
-     margin-left: 15%;
-     margin-right: 15%;
+   #tab-photography-instagram {
+     margin: 0px ! important;
    }
 
-    .tab-photography-wildlife p {
-      margin-left: 15%;
-      margin-right: 15%;
-    }
+   .insta-img {
+     margin-top: 15px;
+     margin-bottom: 15px;
+   }
+
+   .insta-img:hover {
+     transition: opacity 1s ease-out;
+     opacity: 0.8;
+     -moz-opacity: 0.8;
+     -webkit-opacity: 0.8;
+   }
+
+   .insta-container {
+     column-count: 3;
+   }
+
+   .flickr-album {
+     margin-top: 50px;
+     margin-bottom: 50px;
+   }
+
 }

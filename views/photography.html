@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://platform.instagram.com/en_US/embeds.js"></script>
+    <script src="../js/instafeed.min.js"></script>
+    <script src="../js/feed.js"></script>
   </head>
 
 
@@ -33,29 +36,44 @@
 
 <div class="photography-tabs-container">
   <div class="tab">
-    <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'tab-photography-japan')">Japan</button>
-    <button class="tablinks" id="firstOpen" onclick="openCity(event, 'tab-photography-steveston')">Steveston</button>
-    <button class="tablinks" id="secondOpen" onclick="openCity(event, 'tab-photography-wildlife')">Wildlife</button>
+    <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'tab-photography-flickr')">Flickr</button>
+    <button class="tablinks" id="firstOpen" onclick="openCity(event, 'tab-photography-instagram')">Instagram</button>
   </div>
 
   <!-- Tab content -->
-  <div id="tab-photography-japan" class="tabcontent">
-    <h3>Japan 2017</h3>
-    <p>I spent 8 months in Japan as an intern in Kyoto; here's the whole lot!</p>
-    <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157667814114167" title="Japan 2017 (Jan - Aug)"><img src="https://farm2.staticflickr.com/1725/41709363195_3f2c74c834_c.jpg" width="800" height="534" alt="Japan 2017 (Jan - Aug)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+  <!-- Flickr Tab -->
+  <div id="tab-photography-flickr" class="tabcontent">
+
+<!-- Japan album -->
+    <div class="flickr-album">
+      <h3>Japan 2017</h3>
+      <br/>
+      <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157667814114167" title="Japan 2017 (Jan - Aug)"><img src="https://farm2.staticflickr.com/1725/41709363195_3f2c74c834_c.jpg" width="800" height="534" alt="Japan 2017 (Jan - Aug)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+    </div>
+
+<!-- Steveston album -->
+    <div class="flickr-album">
+      <h3>Steveston, Richmond</h3>
+      <br/>
+      <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157701489279731" title="Steveston (2016)"><img src="https://farm2.staticflickr.com/1922/45596300522_354c62a667_c.jpg" width="800" height="520" alt="Steveston (2016)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+    </div>
+
+<!-- Wildlife album -->
+    <div class="flickr-album">
+      <h3>Wildlife</h3>
+      <br/>
+      <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157701597450751" title="Animals (all)"><img src="https://farm2.staticflickr.com/1970/45646831771_8da07afc52_c.jpg" width="800" height="534" alt="Animals (all)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+    </div>
+
   </div>
 
-  <div id="tab-photography-steveston" class="tabcontent" style="margin-left:0px;margin-right:0px;">
-    <h3>Steveston, Richmond</h3>
-    <p>Steveston is one of my places to go for a quiet walk. It is located on the west end of Richmond.</p>
-    <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157701489279731" title="Steveston (2016)"><img src="https://farm2.staticflickr.com/1922/45596300522_354c62a667_c.jpg" width="800" height="520" alt="Steveston (2016)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <!-- Instagram Tab -->
+  <div id="tab-photography-instagram" class="tabcontent">
+    <div id="instafeed" class="insta-container">
+    </div>
   </div>
 
-  <div id="tab-photography-wildlife" class="tabcontent" style="margin-left:0px;margin-right:0px;">
-    <h3>Wildlife</h3>
-    <p>I love nature, and I love animals. There's something about capturing the beauty of an animal in the wild that captivates me. Here's a showcase of some of the wildlife photos I've taken.</p>
-    <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/158175735@N03/albums/72157701597450751" title="Animals (all)"><img src="https://farm2.staticflickr.com/1970/45646831771_8da07afc52_c.jpg" width="800" height="534" alt="Animals (all)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-  </div>
 </div>
 
 <!-- End tabs -->
@@ -102,8 +120,6 @@
  <script text="text/javascript" src="../js/tabs.js"></script>
  <script text="text/javascript">
  // Get the element with id="defaultOpen" and click on it
- document.getElementById("firstOpen").click();
- document.getElementById("secondOpen").click();
  document.getElementById("defaultOpen").click();
  </script>
 
